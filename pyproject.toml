@@ -1,0 +1,28 @@
+[project]
+name = "switchcraft"
+version = "0.1.0"
+description = "SwitchCraft: a programmatic framework for designing state-switching proteins (ICML 2026)"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "boltz",
+    "prody",
+    "matplotlib",
+    "torch==2.7.1",
+]
+
+# SwitchCraft is run as scripts (`python switchcraft.py ...`), not installed as a
+# distributable package — keep uv from trying to build the root project.
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+# Vendored Boltz-1 fork, installed editable from ./boltz (its own pyproject).
+boltz = { path = "boltz", editable = true }
+# Pull torch from the PyTorch CUDA 12.x index per the README (CUDA driver required).
+torch = { index = "pytorch-cu126" }
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true

@@ -5,11 +5,12 @@
 num_states: 2
 
 motifs:
-  - 1prw  # PDB stem under motifs/
+  - 2MHQ
+  # - 1prw  # PDB stem under motifs/
 
 states:
-  - []              # state 0: apo, no ligand
-  - ["ccd:OQO"]    # state 1: holo; replace with your ligand
+  - [ ]              # state 0: apo, no ligand
+  - [ "ccd:OQO" ]    # state 1: holo; replace with your ligand
 
 losses:
   - type: AntiMotifLoss

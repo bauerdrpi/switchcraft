@@ -9,6 +9,7 @@ dependencies = [
     "prody",
     "matplotlib",
     "torch==2.7.1",
+    "cuequivariance-torch>=0.10.0",
 ]
 
 # SwitchCraft is run as scripts (`python switchcraft.py ...`), not installed as a

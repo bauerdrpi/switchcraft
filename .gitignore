@@ -2,3 +2,5 @@
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/switchcraft.iml
 /.idea/workspace.xml
+/boltz/boltz1_conf.ckpt
+/boltz/ccd.pkl
